@@ -1,0 +1,48 @@
+<div class="fixed-top">
+    <nav class="navbar navbar-light navbar-expand-md justify-content-center" style="background-color: white;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7" aria-controls="navbar7" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <h4>Menu</h4>
+        </button>
+        <br>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+            <img src="assets/images/LOGO DAVYCAS.jpg" width="70" height="60" alt="...">
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link lead" routerLink="/accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lead" routerLink="/about">A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lead" routerLink="/service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lead" routerLink="/gallerie">Gallerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lead" routerLink="/partenaire">Partenaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lead" routerLink="/contact">Contact</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+    <div style="background-color: silver; padding: 2px;">
+    </div>
+</div>
+<div style="margin-top: 50px;"></div> 
+    
+<div style="margin-top: 80px;
+            /*background-color: rgb(215, 238, 240);*/
+            background-image: url('assets/images/analyse-eau.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;">
+    <router-outlet></router-outlet>
+    
+    <app-footer></app-footer>
+</div>
