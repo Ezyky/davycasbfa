@@ -154,15 +154,15 @@
     "npm": "^3.9.5"
   },
   "scripts": {
-    "lint": "gulp lint:scripts",
+    "lint": "npm run lint:client && npm run lint:server",
+    "lint:client": "eslint ./client/**/*.ts -c ./client/.eslintrc --ignore-pattern *.spec.ts",
+    "lint:server": "eslint ./server/**/*.js -c ./server/.eslintrc --ignore-pattern *.spec.js --ignore-pattern *.integration.js",
     "test": "gulp test",
+    "test:client": "karma start ./karma.conf.js --single-run",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start": "gulp serve",
-    "build": "gulp build",
-    "cibuild": "gulp cibuild",
-    "postinstall": "gulp serve:dist",
-    "deploy-preprod": "git push origin preprod && git push preprod preprod:master",
-    "deploy-prod": "git push prod master"
+    "start": "node server",
+    "start:client": "webpack-dev-server --config webpack.dev.js",
+    "start:server": "node server"
   },
   "private": true
 }
